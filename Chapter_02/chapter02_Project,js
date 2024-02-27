@@ -1,0 +1,28 @@
+//Chapter project: Miles to kilometers converter
+
+let mVal = 230; //Value in miles
+let kmVal;
+const convVal = 1.60934;    //Miles to Kilometers Conversion value
+kmVal = mVal * convVal;
+
+//Print to the console
+console.log("The distance of " + mVal + " miles is equal to " + kmVal + " kms.");
+
+//Chapter project: BMI calculator
+
+let inch = 15.6;    //Value of the height in inches
+let pound = 500;    //Value of the weight in pounds
+let cm;      //Value of the height in centimeters
+let kilo;   //Value of the weight in kilos
+let bmi;
+//inches to cm
+cm = inch * 2.54;
+console.log(inch + " inches in centimeters is equal to " + cm + " centimeters.");
+
+//puonds to killos
+kilo = pound / 2.2046;
+console.log(pound + " pounds in kilos is equal to " + kilo + " kios.");
+
+//BMI
+bmi = kilo / (cm / 100)**2;
+console.log("BMI is equal to: " + bmi);
