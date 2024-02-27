@@ -3,7 +3,7 @@ let age = prompt("How old are you?");
 //Converting to number
 parseInt(age);
 //Declaring a message variable
-let message;
+let message = "";
 if(age >= 21)
 {
     //If older or equal to 21, confirm entry and ability to by alcohol

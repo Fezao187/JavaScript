@@ -21,5 +21,5 @@ shoppingList = shoppingList.concat(newArr);
 shoppingList = shoppingList.concat(newArr);
 //Last index of pop and output to console
 console.log("The last index of Pop is: " + shoppingList.lastIndexOf("Pop"));
-//Fina list
+//Final list
 console.log(shoppingList);

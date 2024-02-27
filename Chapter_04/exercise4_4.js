@@ -1,8 +1,8 @@
 //Practice exercise 4.4
 //Random number between 0 and 5
-let randNum = Math.floor(Math.random()*5);
+let randNum = Math.floor(Math.random()*6);
 let yourQuestion = prompt("What is your question?");
-let answer;     //Variable that will hold the response
+let answer = "";     //Variable that will hold the response
 
 switch(randNum)
 {
@@ -23,9 +23,6 @@ switch(randNum)
         break;
     case 5:
         answer = "Highly Unlikely";
-        break;
-    case 6:
-        answer = "Not likely";
         break;
     default:
         answer = "Sorry, something went wrong";
