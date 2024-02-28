@@ -21,7 +21,7 @@ console.log(inch + " inches in centimeters is equal to " + cm + " centimeters.")
 
 //puonds to killos
 kilo = pound / 2.2046;
-console.log(pound + " pounds in kilos is equal to " + kilo + " kios.");
+console.log(pound + " pounds in kilos is equal to " + kilo + " kilos.");
 
 //BMI
 bmi = kilo / (cm / 100)**2;

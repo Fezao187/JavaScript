@@ -11,11 +11,11 @@
 // //Printing to the console
 // console.log( str1 + " is a " + typeof(str1));
 // console.log( str2 + " is a " + typeof(str2));
-// console.log( val1 + " is a " + typeof(str1));
-// console.log( val2 + " is a " + typeof(str1));
-// console.log( myNum + " is a " + typeof(str1));
+// console.log( val1 + " is a " + typeof(val1));
+// console.log( val2 + " is a " + typeof(val2));
+// console.log( myNum + " is a " + typeof(myNum));
 
-// //Practice exercise 2.2
+//Practice exercise 2.2
 // console.log("Practice exercise 2.2");
 // let myName = "Katlego";
 // let myAge = 22;
@@ -23,8 +23,8 @@
 
 // console.log("Hello, my name is " + myName + ", I am " + myAge + " years old " + " and I can code JavaScript: " + canCodeJs);
 
-// //Practice exercise 2.3
-// //Calculating the hypotenuse of a triangle using the Phythagorean theorem
+//Practice exercise 2.3
+//Calculating the hypotenuse of a triangle using the Phythagorean theorem
 // console.log("Practice exercise 2.3");
 // let a = prompt("Please enter the value for a:");
 // let b = prompt("Please enter the value for b:");
@@ -35,15 +35,15 @@
 
 //Pratice exercise 2.4
 //Updating values using assignment operators
-console.log("Practice exercise 2.4");
-let a = 4;
-let b = 5;
-let c = 10;
+// console.log("Practice exercise 2.4");
+// let a = 4;
+// let b = 5;
+// let c = 10;
 
-//Add b to a
-console.log(a + b);
-//Divide a by c
-console.log(a / c);
-//Replace c with the modulus of c and b
-c %= b;
-console.log(c);
+// //Add b to a
+// console.log(a + b);
+// //Divide a by c
+// console.log(a / c);
+// //Replace c with the modulus of c and b
+// c %= b;
+// console.log(c);
