@@ -25,4 +25,4 @@ console.log(pound + " pounds in kilos is equal to " + kilo + " kilos.");
 
 //BMI
 bmi = kilo / (cm / 100)**2;
-console.log("BMI is equal to: " + bmi);
+console.log("BMI is equal to: " + bmi); 
