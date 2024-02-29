@@ -10,4 +10,4 @@ console.log(a); //This will print the value into the console
 /*
 The file is just to demonstrate declaring variables
 Printing to the console
-*/
+*/ 
