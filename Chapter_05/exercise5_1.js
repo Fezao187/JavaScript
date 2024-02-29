@@ -4,7 +4,7 @@ let maxNum = 5, //Variable used to store a random number
     correctAns = false,     //A varibale used to track if the value is true
     userNum = 0,
     message = "";
-// console.log(randNum);
+console.log(randNum);
 
 while(randNum !== userNum)
 {
@@ -23,7 +23,6 @@ while(randNum !== userNum)
         message = "Guess was lower\n Try again";
     }else
     {
-        message = "Something went wrong.\n Try again";
         break;
     }
     alert(message);

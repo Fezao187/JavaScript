@@ -5,7 +5,7 @@ let emArray = [],      //Creating an empty array
     counter = 0;       //Count the number of times the loop ran
 
 //Using a while loop to add values to the array
-//While the value is less than 10, it will ad values to the array
+//While the value is less than 10, it will add values to the array
 while(counter < 10)
 {
     //Increment each time
