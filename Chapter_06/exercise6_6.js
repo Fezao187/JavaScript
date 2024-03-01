@@ -18,4 +18,4 @@ function chekNum(num)
 }
 
 //Invoking a printing the result
-console.log(chekNum(7));
+console.log(chekNum(3));

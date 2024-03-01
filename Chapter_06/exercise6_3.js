@@ -32,7 +32,7 @@ function calc()
     }
     else
     {
-        //If they enter a value that is neither, default to add 
+        //If they enter a operator that is neither, default to add 
         return num1 + num2;
     }
 }
