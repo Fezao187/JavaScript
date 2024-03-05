@@ -29,9 +29,9 @@ function update() {
     let outputVals = "";
 
     //Using a for in loop to get all the properties and 
-    //values in the tepm variable
+    //values in the temp variable
     for (let property in tempVar) {
-        //Updating the output to contain property anem and property value
+        //Updating the output to contain property name and property value
         outputVals += (`${property}: ${tempVar[property]}`);
     }
 

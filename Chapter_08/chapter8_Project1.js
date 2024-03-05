@@ -7,7 +7,7 @@ let strWord = "Kristine";
 //Function that takes a parameter of the string value
 function wordFunction(strVal)
 {
-    //Getting the length of the array
+    //Getting the length of the string
     let lengthOfWord = strVal.length;
 
     //Creating an empty string to hold the new word

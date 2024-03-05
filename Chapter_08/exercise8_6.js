@@ -14,7 +14,7 @@ console.log("Math.floor = " + Math.floor(5.7));
 //Math.round
 console.log("Math.round = " + Math.round(5.7));
 
-//Output random value to the console
+//Output a random value to the console
 console.log("Random value = " + Math.random());
 
 //Using math.floor to get a random value:
