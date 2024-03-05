@@ -10,7 +10,7 @@ class Person {
 
     //Adding a fullname method
     fullname(){
-        return `${this.firstName} ${this.lastName}`;
+        return `First name :${this.firstName} \nLast name: ${this.lastName}`;
     }
 }
 

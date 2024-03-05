@@ -19,8 +19,9 @@ let animal1 = new Animals("Tiger", "Roaring");
 let animal2 = new Animals("Lion", "Roar");
 
 //A prototype that adds another action for the animal
-Animals.prototype.legs = 4;
+Animals.prototype.run = () => "Fast";
 
+// console.log(animal1.run());
 //Outputting to the console
-console.log(animal1.animal());
-console.log(animal2.animal());
+animal1.animal();
+animal2.animal();

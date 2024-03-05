@@ -13,4 +13,4 @@ console.log("Inheritance");
 console.log("All of the are true, except bullet number 2");
 
 //5
-console.log("C");
+console.log("C"); //B
