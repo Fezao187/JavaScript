@@ -17,6 +17,6 @@ console.log(`Encoded (${string2}) is (${encodedString2})`);
 //Creating a web URI request
 let uriWeb = "http://www.basescripts.com?=Hello World",
 
-//Encode web URI and output to the console
+    //Encode web URI and output to the console
     encodedUriWeb = encodeURIComponent(uriWeb);
 console.log(encodedUriWeb);
