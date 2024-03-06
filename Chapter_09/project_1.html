@@ -1,0 +1,39 @@
+<div class="output">
+    <h1>Hello</h1>
+    <div>Test</div>
+    <ul>
+        <li id="one">One</li>
+        <li class="red">Two</li>
+    </ul>
+    <div>Test</div>
+    <script>
+        "use strict";
+        //Selecting the class output
+        let output = document.querySelector(".output");
+
+        //Creating a javaScript object called mainlist
+        let mainList = output.querySelector("ul");
+        
+        //Adding main list id
+        mainList.id = "mainlist";
+
+        //Searching for tagname for all divs
+        let allDivs = document.querySelectorAll("div");
+        //Setting the ids of each div tags
+        for(let i = 0; i < allDivs.length; i++)
+        {
+            console.log(allDivs[i].tagName);
+            allDivs[i].id = "id" + (i + 1);
+            
+            //Alternating between even and odd
+            if(i % 2)
+            {
+                allDivs[i].style.color = "red";
+            }
+            else
+            {
+                allDivs[i].style.color = "blue";
+            }
+        }
+    </script>
+</div>
