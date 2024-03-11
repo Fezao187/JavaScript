@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytiscs</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Creating a main class container -->
     <div class="mainContainer">
@@ -18,31 +27,32 @@
         //An array for tracking and adding details
         let trackArr = [],
 
-        //Selecting main container
-        mainContainer = document.querySelector(".mainContainer");
+            //Selecting main container
+            mainContainer = document.querySelector(".mainContainer");
 
         //Adding an event listener
         mainContainer.addEventListener("click", tracker);
 
         //A function to handle clicks
-        function tracker(f){
+        function tracker(f) {
             //If it has an id not to track clicks
             let elem = f.target;
-            if(elem.id){
+            if (elem.id) {
                 //Temporary object to track values
                 let tempObj = {};
                 tempObj.content = elem.textContent;
-            tempObj.id = elem.id;
-            tempObj.tagName = elem.tagName;
-            tempObj.class = elem.className;
+                tempObj.id = elem.id;
+                tempObj.tagName = elem.tagName;
+                tempObj.class = elem.className;
 
-            //Add obj elemenys to array
-            trackArr.push(tempObj);
-            //Output values to the console
-            console.dir(elem);
-            console.log(trackArr);
+                //Add obj elemenys to array
+                trackArr.push(tempObj);
+                //Output values to the console
+                console.dir(elem);
+                console.log(trackArr);
             }
         }
     </script>
 </body>
+
 </html>

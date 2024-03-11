@@ -14,7 +14,7 @@
     <input type="text" name="input2">
 
     <!-- Ouput field -->
-    <div class="ouput"></div>
+    <div class="output"></div>
     <script>
         //Selecting variables
         let output = document.querySelector(".output"),
@@ -26,7 +26,7 @@
             elem.addEventListener("keydown", (f) => {
                 if (!isNaN(f.key)) {
                     //Output to the output field
-                    output.textContent += e.key;
+                    output.textContent += f.key;
                 }
             });
             //Add keydup and Check is value is a number
@@ -34,7 +34,7 @@
                 console.log(f.key);
             });
             //Check if there was a paste then output to the console
-            elem.addEventListener("pasted", (f) => {
+            elem.addEventListener("paste", (f) => {
                 console.log("pasted");
             });
         });

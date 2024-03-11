@@ -19,7 +19,7 @@
         <button class="submit">Submit</button>
     </form>
     <script>
-        //Selecting the form as an objec
+        //Selecting the form as an object
         let form = document.querySelector("form");
 
         //Adding a submit event listener
@@ -35,7 +35,7 @@
                 console.log("Enter last name");
                 error = true;
             }
-            if (form.age.value < 6) {
+            if (form.age.value < 21) {
                 console.log("You must be 21 or over");
                 error = true;
             }
@@ -48,7 +48,7 @@
         //Adding a checker function that will check the length of the string
         function checker(val) {
             console.log(val.length);
-            if (val.length < 20) {
+            if (val.length < 3) {
                 return true;
             }
             return false;
