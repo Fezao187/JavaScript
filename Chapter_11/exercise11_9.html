@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JS Tester</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1
+        <div id="dragme" draggable="true">
+            Drag Me Please!
+        </div>
+    </div>
+    <div class="box">2</div>
+    <script>
+        //Selectinging draggable element as an object
+        let drag = document.querySelector("#dragme");
+
+        //Adding an event listener drag start
+        drag.addEventListener("dragstart", (f) => {
+            //Set opacity to 0.5
+            drag.style.opacity = 0.5;
+        });
+
+        //Adding an event listener drag end
+        drag.addEventListener("dragend", (f) => {
+            //Remove opacity
+            drag.style.opacity = "";
+        });
+
+        //Select all boxes
+        let boxes = document.querySelectorAll(".box");
+
+        //Adding eventlistners to each box
+        boxes.forEach(box => {
+            //Add red class when drag enter is triggered
+            box.addEventListener("dragenter", (f) => {
+                f.target.classList.add('red');
+            });
+
+            //Dragover event and add a prevent default
+            box.addEventListener("dragover", (f) => {
+                f.preventDefault();
+            });
+
+            //Remove red class on drage leave
+            box.addEventListener("dragleave", (f) => {
+                e.target.classList.remove('red');
+            });
+
+            //Adding the event listener of drop to the box and append draggable element
+            box.addEventListener("drop", (f) => {
+                //Using prevent default to disable actions that might already exist
+                f.preventDefault();
+                console.log("dropped");
+                f.target.appendChild(drag);
+            });
+        });
+    </script>
+</body>
+
+</html>

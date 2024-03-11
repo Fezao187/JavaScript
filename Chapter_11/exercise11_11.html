@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<style>
+    /* Setting up styling for the div */
+    div {
+        background-color: purple;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <!-- Element to be moved on the page -->
+    <div id="block"></div>
+    <script>
+        //Selecting and storing element
+        let block = document.querySelector("div"),
+        
+        //Setting up an object for speed direction and position
+        obj = {
+            speed: 20,
+            direction: 1,
+            position: 0
+        };
+
+        //Adding an event listener if the event is clicked
+        block.addEventListener("click", move);
+
+        function move() {
+            let defaultVal = 30;
+            setInterval(function () {
+                //If counter is less than 1, clear the interval
+                if (defaultVal < 1) {
+                    clearInterval();
+                } else {
+                    if (obj.position > 800 || obj.position < 0) {
+                        obj.direction *= -1;
+                    }
+                    defaultVal--;
+                    obj.position += defaultVal * obj.direction;
+                    block.style.left = obj.position + "px";
+                    console.log(obj.position);
+                }
+            }, 2);
+        }
+    </script>
+</body>
+</html>

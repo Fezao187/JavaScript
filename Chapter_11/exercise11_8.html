@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11.8</title>
+</head>
+
+<body>
+    <h1>Exercise 11.8</h1>
+    <!-- Two input fields -->
+    <input type="text" name="input1">
+    <input type="text" name="input2">
+
+    <!-- Ouput field -->
+    <div class="ouput"></div>
+    <script>
+        //Selecting variables
+        let output = document.querySelector(".output"),
+            eles = document.querySelectorAll("input");
+
+        //Using a foreach to add event listeners
+        eles.forEach(elem => {
+            //Add keydown and Check is value is a number
+            elem.addEventListener("keydown", (f) => {
+                if (!isNaN(f.key)) {
+                    //Output to the output field
+                    output.textContent += e.key;
+                }
+            });
+            //Add keydup and Check is value is a number
+            elem.addEventListener("keyup", (f) => {
+                console.log(f.key);
+            });
+            //Check if there was a paste then output to the console
+            elem.addEventListener("pasted", (f) => {
+                console.log("pasted");
+            });
+        });
+    </script>
+</body>
+
+</html>

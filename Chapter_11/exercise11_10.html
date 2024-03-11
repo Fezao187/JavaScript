@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11.10</title>
+</head>
+<body>
+    <h1>Exercise 11.10</h1>
+    <!-- Creating a form -->
+    <form action="">
+        <!-- Adding three unput elements and submit button -->
+        <input type="text" name="first" placeholder="Enter first name....">
+        <br>
+        <input type="text" name="last" placeholder="Enter last name......">
+        <br>
+        <input type="number" name="age" placeholder="Enter age......">
+        <br>
+        <button class="submit">Submit</button>
+    </form>
+    <script>
+        //Selecting the form as an objec
+        let form = document.querySelector("form");
+
+        //Adding a submit event listener
+        form.addEventListener("submit", (f) => {
+            //Setting the default value to false
+            let error = false;
+
+            if (checker(form.first.value)) {
+                console.log("Enter first name");
+                error = true;
+            }
+            if (checker(form.last.value)) {
+                console.log("Enter last name");
+                error = true;
+            }
+            if (form.age.value < 21) {
+                console.log("You must be 21 or over");
+                error = true;
+            }
+            if (error) {
+                f.preventDefault();
+                console.log("please review the form");
+            }
+        });
+
+        //Adding a checker function that will check the length of the string
+        function checker(val) {
+            console.log(val.length);
+            if (val.length < 20) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10.4</title>
+</head>
+
+<body>
+    <h1>Exercise 10.4</h1>
+    <!-- Three html elements with the same class -->
+    <div class="bold">
+        <P>The intro</P>
+    </div>
+    <div class="bold">
+        <p>I don't know, something</p>
+    </div>
+    <div class="bold">
+        <p>E.Z</p>
+    </div>
+    <script>
+        //Selcting elements by class name
+        let elements = document.getElementsByClassName("bold");
+        //One of the class elements and output to the console
+        console.log(elements.item(1));
+    </script>
+</body>
+</html>

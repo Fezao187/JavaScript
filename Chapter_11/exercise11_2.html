@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11.2</title>
+</head>
+<body>
+    <!-- Adding divs with different colors -->
+    <div>Red</div>
+    <div>Green</div>
+    <div>Blue</div>
+    <div>Purple</div>
+    <div>Yellow</div>
+    <div>Orange</div>
+    <div>Brown</div>
+    <div>Pink</div>
+    <div>Black</div>
+    <script>
+        //Adding click event listeners
+        let divs = document.querySelectorAll("div");
+        //For each item, update color to match text
+        divs.forEach((item)=>{
+            item.addEventListener("click",()=>{
+                document.body.style.backgroundColor = item.textContent;
+            });
+        });
+    </script>
+</body>
+</html>

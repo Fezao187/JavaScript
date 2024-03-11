@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exericse 11.3</title>
+</head>
+<body>
+    <h1>Exericse 11.3</h1>
+    <script>
+        
+        //Attaching an onload function
+        window.onload = (f) => {
+            //Invoking the function
+            message("Window Ready", f);
+        }
+
+        //A second function with the event listener
+        document.addEventListener("DOMContentLoaded", (f) => {
+            message("Document Ready", f);
+        });
+
+        //Creating a function that takes two parameter
+        function message(strMessage, eventObj)
+        {
+            //output to the console
+            console.log(eventObj, strMessage);
+        }
+    </script>
+</body>
+</html>

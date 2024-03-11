@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exericse 11.4</title>
+</head>
+<body>
+    <H1>Exercise 11.4</H1>
+    <!-- Blank element with a class assigned to it -->
+    <div class="colour"></div>
+    <script>
+        //Selecting the elemwnt using its class
+        let divColor = document.querySelector(".colour");
+        
+        //Updating content to hello world
+        divColor.textContent = "Hello World";
+
+        //Updating style properties
+        //Width
+        divColor.style.width = "100px";
+
+        //Height
+        divColor.style.height = "100px";
+
+        //BG color
+        divColor.style.backgroundColor = "Purple";
+
+        //Adding the event listiners
+        divColor.addEventListener("mousedown", function (f) {
+            divFunction("green", f);
+        });
+        divColor.addEventListener("mouseover", function (f) {
+            divFunction("red", f);
+        });
+        divColor.addEventListener("mouseout", function (f) {
+            divFunction("blue", f);
+        });
+        divColor.addEventListener("mouseup", function (f) {
+            divFunction("brown", f);
+        });
+        //Function that takes two arguements
+        function divFunction(color, event)
+        {
+            //Change color
+            divColor.style.backgroundColor = color;
+            //Outputting color and event to console
+            console.log(color, event);
+        }
+    </script>
+</body>
+</html>

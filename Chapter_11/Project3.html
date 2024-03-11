@@ -1,0 +1,43 @@
+<!-- Mouse position tracker -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse position tracker</title>
+    <style>
+        .container
+        {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .active
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Creating elements and add sizing ti it -->
+    <div class="container">
+        <div id="output"></div>
+    </div>
+    <script>
+        //Selecting main container and add event listeners
+        let elem = document.querySelector(".container");
+        //Adding active class on mouseover
+        elem.addEventListener("mouseover", (f) => { f.target.classList.add("active"); });
+        //Removing active class on mouse out
+        elem.addEventListener("mouseout", (f) => { f.target.classList.remove("active"); });
+        //Calling function to track elements
+        elem.addEventListener("mousemove", coordin);
+        function coordin() {
+            let html = "X:" + event.clientX + " | Y:" + event.clientY;
+            document.getElementById("output").innerHTML = html;
+        }
+    </script>
+</body>
+</html>

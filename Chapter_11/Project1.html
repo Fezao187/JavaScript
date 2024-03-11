@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytiscs</title>
+</head>
+<body>
+    <!-- Creating a main class container -->
+    <div class="mainContainer">
+        <!-- Four elements with class of box and unique id -->
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+    </div>
+    <script>
+        //An array for tracking and adding details
+        let trackArr = [],
+
+        //Selecting main container
+        mainContainer = document.querySelector(".mainContainer");
+
+        //Adding an event listener
+        mainContainer.addEventListener("click", tracker);
+
+        //A function to handle clicks
+        function tracker(f){
+            //If it has an id not to track clicks
+            let elem = f.target;
+            if(elem.id){
+                //Temporary object to track values
+                let tempObj = {};
+                tempObj.content = elem.textContent;
+            tempObj.id = elem.id;
+            tempObj.tagName = elem.tagName;
+            tempObj.class = elem.className;
+
+            //Add obj elemenys to array
+            trackArr.push(tempObj);
+            //Output values to the console
+            console.dir(elem);
+            console.log(trackArr);
+            }
+        }
+    </script>
+</body>
+</html>

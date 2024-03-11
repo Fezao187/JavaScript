@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10.3</title>
+</head>
+
+<body>
+    <h1>Exercise 10.3</h1>
+    <!-- Three html elements with the same tag -->
+    <div class="intro">
+        <P>The intro</P>
+    </div>
+    <div class="somethingElse">
+        <p>I don't know, something</p>
+    </div>
+    <div class="easy">
+        <p>E.Z</p>
+    </div>
+    <script>
+        //Accessing elements by tag name
+        let randVar = document.getElementsByTagName("div");
+        //Getting middle div by using the index value
+        //And output to console
+        console.log(randVar.item(1));
+    </script>
+</body>
+
+</html>

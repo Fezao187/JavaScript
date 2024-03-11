@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JS Tester</title>
+</head>
+
+<body>
+    <div class="output1">
+    </div>
+    <input type="text" placeholder="First Name" name="first"><br>
+    <input type="text" placeholder="Last Name" name="last"><br>
+    <script>
+        //Adding output to a varaiable
+        let output = document.querySelector(".ouput1"),
+
+        //selecting both input fields
+        input1 = document.querySelector("input[name='first']"),
+        input2 = document.querySelector("input[name='last']");
+
+        //Adding event listeners to both inputs
+        //Input1 Change
+        input1.addEventListener("change", (f) => {
+            console.log("change");
+            display(input1.value);
+        });
+        //Input1 Blur
+        input1.addEventListener("blur", (f) => {
+            console.log("blur");
+        });
+        //Input1 Focus
+        input1.addEventListener("focus", (f) => {
+            console.log("focus");
+        });
+        //input 2 change
+        input2.addEventListener("change", (f) => {
+            console.log("change");
+            display(input2.value);
+        });
+        //input 2 blur
+        input2.addEventListener("blur", (f) => {
+            console.log("blur");
+        });
+        //Input 2 focus
+        input2.addEventListener("focus", (f) => {
+            console.log("focus");
+        });
+
+        //Function to handle output
+        function display(str) {
+            output.textContent = str;
+        }
+    </script>
+</body>
+
+</html>

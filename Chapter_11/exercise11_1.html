@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11.1</title>
+</head>
+<body>
+    <h1>Simple html</h1>
+    <script>
+        //An window onclick function
+        let darkMode = false;
+        window.onclick = () => {
+            //Output message to the console
+            console.log(darkMode);
+            //A condition that checks if darkmode is true or false
+            if (!darkMode) {
+                //If false update the color and text to black and white respectively
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                darkMode = true;
+            } else {
+                //Else the opposite
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                darkMode = false;
+            }
+        }
+    </script>
+</body>
+</html>

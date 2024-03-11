@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10.7</title>
+</head>
+<body>
+    <h1>Exercise 10.7</h1>
+<!-- Buttons invoking the same function -->
+    <button onclick="message(this)">Click me</button>
+    <button onclick="message(this)">Click me aLso</button>
+    <script>
+        //A function to handle clicks
+        function message(element)
+        {
+            alert("Chapter 10!!!");
+            console.dir(element.textContent);
+        }
+    </script>
+</body>
+</html>

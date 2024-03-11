@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="message"></div>
+    <div id="output"></div>
+    <script>
+        //An array of names
+        let arrNames = ["Katlego", "Kristine", "Wildheart", "Love", "Karabo"],
+
+            //Selecting pages elements as JavaScript objects
+            message = document.querySelector("#message");
+
+        //Adding the build function
+        build();
+        function build()
+        {
+            //Creating the html table
+            let html = "<h1>Table of friends</h1><table>";
+            //Looping through the contents of the array
+            arrNames.forEach((elem, index) => {
+                //Output results into the table
+                html =+ `<tr class="box" data-row="${index}" data-name="${elem}" onclick="getData(this)"><td>${elem}</td></tr>`;
+            });
+            html += "</table>";
+            //Adding the table to the HTML
+            document.getElementById("output").innerHTML = html;
+        }
+
+        //Creating the get data function
+        function getData(elem)
+        {
+            //Getting attributes from table row
+            let tempVal = elem.getAttribute("data-row"),
+                tempVal2 = elem.getAttribute("data-name");
+            //Outputting valuess into message
+            message.innerHTML = `${tempVal2} is in row #${tempVal}`;
+        }
+    </script>
+</body>
+
+</html>

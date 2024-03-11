@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JS Tester</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box0">Box #1</div>
+        <div class="box" id="box1">Box #2</div>
+        <div class="box" id="box2">Box #3</div>
+        <div class="box" id="box3">Box #4</div>
+    </div>
+    <script>
+        //Selecting all classes with the elements
+        //Main container
+        let main = document.querySelector(".container"),
+            //All class boxes
+            boxes = document.querySelectorAll(".box");
+
+        //Add event listeners to the main container
+        //Ouput 4 and set to false
+        main.addEventListener("click", (f) => {
+            console.log("4");
+        }, false);
+
+        //Ouput 1 and set to true
+        main.addEventListener("click", (f) => {
+            console.log("1");
+        }, true);
+
+        //For each nested elements add click event listeners
+        boxes.forEach(elem => {
+            //output 3 and set to false
+            elem.addEventListener("click", (f) => {
+                console.log("3");
+                console.log(f.target.textContent);
+            },false);
+            //output 2 and set to true
+            elem.addEventListener("click", (f) => {
+                console.log("2");
+                console.log(f.target.textContent);
+            },true);
+        });
+    </script>
+</body>
+
+</html>
