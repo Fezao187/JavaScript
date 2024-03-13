@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JavaScript Course</title>
+</head>
+
+<body>
+    <div class="output"></div>
+    <input type="text" placeholder="Enter Email">
+    <button>Check</button>
+    <script>
+        //Selecting a all elements as JS objects
+        let output = document.querySelector(".output"),
+            inputTxt = document.querySelector("input"),
+            checkBtn = document.querySelector("button");
+
+        //Adding an event listener that will get the current input value
+        checkBtn.addEventListener("click", (f) => {
+            //Get current value of input field
+            let inputVal = inputTxt.value,
+                //A blank response value
+                responseVal = "",
+                //Adding a test and email format
+                emailFormat = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g,
+                eTest = emailFormat.test(inputVal);
+
+            //if result is false, update response to false
+            if (!eTest) {
+                responseVal = "Invalid Email";
+                //Set output color to red
+                output.style.color = "red";
+            }
+            else {
+                //Else update the response to email is correct
+                responseVal = "Email format is correct";
+                output.style.color = "green";
+            }
+
+            //Output response value to the output element
+            output.textContent = responseVal;
+        })
+    </script>
+</body>
+
+</html>
