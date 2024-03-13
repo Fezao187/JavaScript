@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="output">Complete JavaScript Course</div>
+    Search for:
+    <input id="sText" type="text">
+    <br> Replace with:
+    <input id="rText" type="text">
+    <br>
+    <button>Replace</button>
+    <script>
+        //Select three page elements using JavaScript
+        let output = document.querySelector("#output"),
+            sText = document.querySelector("#sText"),
+            rText = document.querySelector("#rText");
+
+        //Add and event listener to the button
+        document.querySelector("button").addEventListener("click", lookUp);
+
+        //Create a lookup function
+        function lookUp() {
+            //Finding and replacing  the text in the output element
+            //Assigning the output element's text content to a variable
+            let s = output.textContent,
+                //Assigning value of the input to a variable
+                rt = rText.value,
+                //Creating a regex with the value of the first input field
+                re = new RegExp(sText.value, "gi");
+
+            //Use match() using regex, check for a match
+            if (s.match(re)) {
+                //If match is found use replace() to set a new value
+                let newVal = s.replace(re, rt);
+                output.textContent = newVal;
+            }
+        }
+    </script>
+</body>
+
+</html>
