@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <style>
+        .ready {
+            background-color: #ddd;
+            color: red;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input placeholder="New Item" value="test item" maxlength="30">
+        <button>Add</button>
+    </div>
+    <ul class="output">
+    </ul>
+    <script>
+        //Selecting all page elements as javascript elements
+        let mainDiv = document.querySelector(".main input"),
+            // inputElem = document.querySelector("input"),
+            addBtn = document.querySelector(".main button"),
+            output = document.querySelector(".output"),
+            //Creating a tasks array
+            tasks = JSON.parse(localStorage.getItem("tasklist")) || [];
+            
+        addBtn.addEventListener("click", createListItem);
+        //Loopimg through the tasklist array and store them as objects
+        if (tasks.length > 0) {
+            tasks.forEach((task) => {
+                genItem(task.val, task.checked);
+            });
+        }
+        //A function to stringify the object
+        function saveTasks() {
+            localStorage.setItem("tasklist", JSON.stringify(tasks));
+        }
+
+        //Creating a separate function to build task
+        function buildTask() {
+            tasks.length = 0;
+            //Selecting all list elements
+            let curList = output.querySelectorAll("li");
+            //Looop through all the list items
+            curList.forEach((el) => {
+                let tempTask = {
+                    val: el.textContent,
+                    checked: false
+                };
+                if (el.classList.contains("ready")) {
+                    tempTask.checked = true;
+                }
+                tasks.push(tempTask);
+            });
+            saveTasks();
+        }
+
+        //A function to create a new list item
+        function genItem(val, complete) {
+            let li = document.createElement("li"),
+                tempVal = document.createTextNode(val);
+            li.appendChild(tempVal);
+            output.append(li);
+            mainDiv.value = "";
+            //An event listener that will toggle ready class when click
+            if (complete) {
+                li.classList.add("ready");
+            }
+            li.addEventListener("click", (e) => {
+                li.classList.toggle("ready");
+                buildTasks();
+            });
+            return val;
+        }
+
+        //Create the list item
+        function createListItem() {
+            let val = mainDiv.value;
+            if (val.length > 0) {
+                let myObj = {
+                    val: genItem(val, false),
+                    checked: false
+                };
+                tasks.push(myObj);
+                saveTasks();
+            }
+        }
+    </script>
+</body>
+
+</html>
