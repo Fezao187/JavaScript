@@ -14,4 +14,4 @@ function loopArgs() {
 }
 
 //Output to the console
-console.log(loopArgs("Value1", "TWO", "Three", "Four", "Five", "Six", "Oi"));
+console.log(loopArgs("Value1", "TWO", "Three", "Four", "Five", "Six", "Oi", "Something"));
