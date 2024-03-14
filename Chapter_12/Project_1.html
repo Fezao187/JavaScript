@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <textarea name="txtarea" rows=2 cols=50></textarea>
+    <button>Get Emails</button>
+    <textarea name="txtarea2" rows=2 cols=50></textarea>
+    <script>
+        //Selecting elements as js objects
+        let textarea1 = document.querySelector("textarea[name='txtarea']"),
+            textarea2 = document.querySelector("textarea[name='txtarea2']");
+        //Add an event listener that invokes a function that checks email
+        document.querySelector("button").addEventListener("click", validateEmail);
+
+        //Validate the email
+        function validateEmail() {
+            let txt = textarea1.value,
+                emailFormat = txt.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi),
+                emailArr = [];
+
+            for (let x = 0; x < emailFormat.length; x++) {
+                if (emailArr.indexOf(emailFormat[x]) == -1) {
+                    emailArr.push(emailFormat[x]);
+                }
+            }
+            textarea2.value = emailArr.join(',');
+        }
+    </script>
+</body>
+
+</html>
