@@ -26,4 +26,3 @@ formElem.addEventListener("submit", (e) => {
    anchor.click();
 })
 
-//Saving form data to JSON file
