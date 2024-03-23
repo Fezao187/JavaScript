@@ -1,11 +1,4 @@
-:root {
-    --color-lightest: #f9fdfe;
-    --color-gray-light: #cdcfcf;
-    --color-gray-medium: #686a69;
-    --color-gray-dark: #414643;
-    --color-darkest: #2a2f2c;
-}
-
+/* A simple reset. */
 *,
 ::before,
 ::after {
@@ -20,117 +13,124 @@
 
 /* Set up fonts, colors and all that jazz. */
 body {
-    background: var(--color-lightest);
-    color: var(--color-gray-medium);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: #f9fdfe;
+    color: #686a69;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    line-height: 1.45;
+    line-height: 1.75;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Headings use a different font because they’re hipsters. */
 h1,
 h2 {
-    color: var(--color-darkest);
-    font-size: 110%;
-    line-height: 1.1;
-}
-
-h1 {
-    font-size: 125%;
+    color: #2a2f2c;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    line-height: 1.125;
 }
 
 /* Set up general layout rules for outer containers. */
-.contact-form,
+.content,
 .results {
     width: 90vw;
     max-width: 550px;
     margin: 8vh auto;
 }
 
-p {
+.content__heading {
+    font-size: 125%;
+}
+
+.content__lede {
     margin-top: 0.5rem;
     font-size: 87.5%;
 }
 
-.results pre {
+.results__heading {
+    font-size: 110%;
+}
+
+.results__display-wrapper {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background: var(--color-lightest);
-    border: 1px solid var(--color-gray-light);
+    background: #f9fdfe;
+    border: 1px solid #cdcfcf;
     overflow-x: scroll;
 }
 
-.contact-form form {
+.contact-form {
     position: relative;
     display: block;
     margin: 0;
     padding: 1rem 0 2rem;
-    border-top: 1px solid var(--color-gray-light);
-    border-bottom: 1px solid var(--color-gray-light);
+    border-top: 1px solid #cdcfcf;
+    border-bottom: 1px solid #cdcfcf;
     overflow: hidden;
 }
 
-.input-group {
+.contact-form__input-group {
     margin-top: 0.25rem;
     padding: 0.5rem 1rem;
 }
 
-.contact-form label {
+.contact-form__label {
     display: block;
-    color: var(--color-gray-dark);
+    color: #414643;
     font-family: Lato, sans-serif;
-    font-size: 90%;
+    font-size: 75%;
     line-height: 1.125;
 }
 
-.group-label {
+.contact-form__label--checkbox-group {
     display: inline-block;
     margin-right: 1rem;
-    font-size: 90%;
+    font-size: 75%;
 }
 
-.contact-form label.inline {
+.contact-form__label--checkbox,
+.contact-form__label--radio {
     display: inline-block;
     margin-left: 0.25rem;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.contact-form__input {
     display: block;
-    margin-top: 0.25rem;
+    margin-top: 0;
     padding: 0.5rem 0.75rem;
-    border: 1px solid var(--color-gray-light);
+    border: 1px solid #cdcfcf;
     width: 100%;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     transition: 150ms border-color linear;
 }
 
-.contact-form input[type=checkbox],
-.contact-form input[type=radio] {
+.contact-form__input--checkbox,
+.contact-form__input--radio {
     display: inline-block;
     width: auto;
 }
 
-.contact-form input[type=checkbox]:not(:first-of-type),
-.contact-form input[type=radio]:not(:first-of-type) {
+.contact-form__input--checkbox~.contact-form__input--checkbox,
+.contact-form__input--radio~.contact-form__input--radio {
     margin-left: 1rem;
 }
 
-.contact-form input:focus,
-.contact-form input:active {
-    border-color: var(--color-gray-medium);
+.contact-form__input:focus,
+.contact-form__input:active {
+    border-color: #686a69;
+    outline: 0;
 }
 
-.contact-form button {
+.contact-form__button {
     display: block;
     margin: 0.5rem 1rem 0;
     padding: 0 1rem 0.125rem;
-    background-color: var(--color-gray-medium);
+    background-color: #686a69;
     border: 0;
-    color: var(--color-lightest);
+    color: #f9fdfe;
     font-family: lato, sans-serif;
     font-size: 100%;
     letter-spacing: 0.05em;
@@ -139,9 +139,10 @@ p {
     transition: 150ms all linear;
 }
 
-.contact-form button:hover,
-.contact-form button:active,
-.contact-form button:focus {
-    background: var(--color-darkest);
+.contact-form__button:hover,
+.contact-form__button:active,
+.contact-form__button:focus {
+    background: #2a2f2c;
     cursor: pointer;
+    outline: 0;
 }
