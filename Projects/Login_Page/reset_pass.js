@@ -39,6 +39,12 @@ function handleSubmit() {
                     element.style.height = "10px";
                     element.style.fontSize = "8px";
                     element.textContent = "Passwords don't match, please try again!!!";
+                    setTimeout(function () {
+                        element.style.color = "white";
+                        element.style.height = "0px";
+                        element.style.fontSize = "0px";
+                        element.textContent = "";
+                    }, 5000);
                 });
             }
         }
@@ -47,6 +53,12 @@ function handleSubmit() {
             output.style.height = "10px";
             output.style.fontSize = "8px";
             output.textContent = "User name and email don't match";
+            setTimeout(function () {
+                output.style.color = "white";
+                output.style.height = "0px";
+                output.style.fontSize = "0px";
+                output.textContent = "";
+            }, 5000);
         }
     }
     else {
@@ -55,9 +67,13 @@ function handleSubmit() {
         usernameErr.style.height = "10px";
         usernameErr.style.fontSize = "8px";
         usernameErr.textContent = "Username does not exist";
+        setTimeout(function () {
+            usernameErr.style.color = "white";
+            usernameErr.style.height = "0px";
+            usernameErr.style.fontSize = "0px";
+            usernameErr.textContent = "";
+        }, 5000);
     }
-
-
 }
 
 //An event listser to call the function

@@ -10,6 +10,7 @@ function handleSubmit() {
         createPassword = document.getElementById("createPassword").value,
         confirmPassword = document.getElementById("confirmPassword").value,
         usernameErr = document.querySelector(".usernameErr"),
+        output = document.querySelector(".output"),
         pwdErr = document.querySelectorAll(".pwdErr"),
         obj = {};
 
@@ -29,8 +30,10 @@ function handleSubmit() {
             }
             //Save to local storage
             localStorage.setItem(username, JSON.stringify(obj));
-            alert("Account created successfully");
-
+            output.style.color = "Green";
+            output.style.height = "10px";
+            output.style.fontSize = "8px";
+            output.textContent = "Account created successfully";
         }
         else {
             //Tell the user enter password again because they don't match
@@ -39,6 +42,12 @@ function handleSubmit() {
                 element.style.height = "10px";
                 element.style.fontSize = "8px";
                 element.textContent = "Passwords don't match, please try again!!!";
+                setTimeout(function () {
+                    element.style.color = "white";
+                    element.style.height = "0px";
+                    element.style.fontSize = "0px";
+                    element.textContent = "";
+                }, 5000);
             });
         }
     }
@@ -47,6 +56,12 @@ function handleSubmit() {
         usernameErr.style.height = "10px";
         usernameErr.style.fontSize = "8px";
         usernameErr.textContent = "Username already exists";
+        setTimeout(function () {
+            usernameErr.style.color = "white";
+            usernameErr.style.height = "0px";
+            usernameErr.style.fontSize = "0px";
+            usernameErr.textContent = "";
+        }, 5000);
     }
 }
 

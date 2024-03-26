@@ -25,6 +25,12 @@ function handleSubmit() {
         pwdErr.style.height = "10px";
         pwdErr.style.fontSize = "8px";
         pwdErr.textContent = "Incorrect password or username. Please try again";
+        setTimeout(function () {
+            pwdErr.style.color = "white";
+            pwdErr.style.height = "0px";
+            pwdErr.style.fontSize = "0px";
+            pwdErr.textContent = "";
+        }, 5000);
     }
 }
 
