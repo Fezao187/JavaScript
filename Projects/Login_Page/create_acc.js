@@ -22,8 +22,7 @@ function handleSubmit() {
         //Get available user info for this username
         let tempObj = JSON.parse(localStorage.getItem(username)) || null;
         //Check if it exists
-        if(tempObj === null)
-        {
+        if (tempObj === null) {
             /**If our search for user returns nothing, set the new
              * user info to object.
              */
@@ -38,8 +37,7 @@ function handleSubmit() {
             //Save to local storage
             localStorage.setItem(username, JSON.stringify(obj));
         }
-        else
-        {
+        else {
             alert("username already exists");
         }
     }
