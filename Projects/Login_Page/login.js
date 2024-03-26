@@ -12,7 +12,7 @@ function handleSubmit() {
     console.log(obj);
     
     //Check if user info matches the one in storage
-    if((obj.username === username) && obj.confirmPassword === password)
+    if((obj.username === username) && obj.password === password)
     {
         /**TODO: Show th user they logged in (in a cool way),
          * for now just use an alert

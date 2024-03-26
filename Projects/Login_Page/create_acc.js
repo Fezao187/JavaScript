@@ -19,6 +19,12 @@ function handleSubmit() {
         alert("Passwords dont match, please try again!!!");
     }
     else {
+        // //Checking local storage for email
+        // for (let i = 0; i < localStorage.length; i++) {
+        //     if (localStorage.key(i) === email) {
+        //         alert("Email already exists");
+        //     }
+        // }
         //Get available user info for this username
         let tempObj = JSON.parse(localStorage.getItem(username)) || null;
         //Check if it exists
@@ -30,12 +36,11 @@ function handleSubmit() {
                 nameOfUser: nameOfUser,
                 username: username,
                 email: email,
-                createPassword: createPassword,
-                confirmPassword: confirmPassword
+                password: createPassword,
             }
-
             //Save to local storage
             localStorage.setItem(username, JSON.stringify(obj));
+            alert("Account created successfully");
         }
         else {
             alert("username already exists");
