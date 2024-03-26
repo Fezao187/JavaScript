@@ -5,25 +5,26 @@ let form = document.getElementById("form");
 function handleSubmit() {
     //Get all form elements
     let username = document.getElementById("username").value,
-        password = document.getElementById("password").value;
+        password = document.getElementById("password").value,
+        pwdErr = document.querySelector(".pwdErr");
 
     //Get user info
-    let obj = JSON.parse(localStorage.getItem(username)) || {username: "Not Found"};
+    let obj = JSON.parse(localStorage.getItem(username)) || { username: "Not Found" };
     console.log(obj);
-    
+
     //Check if user info matches the one in storage
-    if((obj.username === username) && obj.password === password)
-    {
+    if ((obj.username === username) && obj.password === password) {
         /**TODO: Show th user they logged in (in a cool way),
          * for now just use an alert
          */
         alert("You have successfully logged in");
     }
-    else{
-        /**TODO: Tell the user enter login details again because they
-         * don't match(In a cool way). For now just use an alert.
-         */
-        alert("Incorrect password or username\nPlease try again")
+    else {
+        // Tell the user enter login details again because they don't match
+        pwdErr.style.color = "red";
+        pwdErr.style.height = "10px";
+        pwdErr.style.fontSize = "8px";
+        pwdErr.textContent = "Incorrect password or username. Please try again";
     }
 }
 

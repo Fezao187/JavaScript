@@ -1,0 +1,7 @@
+.pwdErr, .usernameErr
+{
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
