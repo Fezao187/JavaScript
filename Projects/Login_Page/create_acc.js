@@ -18,9 +18,9 @@ function handleSubmit() {
     //Check if it exists
     if (tempObj === null) {
         if (createPassword === confirmPassword) {
-        /**If our search for user returns nothing and passwords match, set the new
-         * user info to object.
-         */
+            /**If our search for user returns nothing and passwords match, set the new
+             * user info to object.
+             */
             obj = {
                 nameOfUser: nameOfUser,
                 username: username,

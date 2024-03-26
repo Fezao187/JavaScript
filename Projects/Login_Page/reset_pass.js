@@ -8,6 +8,9 @@ function handleSubmit() {
         username = document.getElementById("username").value,
         newPassword = document.getElementById("newPassword").value,
         confirmPassword = document.getElementById("confirmPassword").value,
+        usernameErr = document.querySelector(".usernameErr"),
+        pwdErr = document.querySelectorAll(".pwdErr"),
+        output = document.querySelector(".output"),
         //Get user info from localstorage
         obj = JSON.parse(localStorage.getItem(username)) || { username: "Not Found" };
 
@@ -24,19 +27,34 @@ function handleSubmit() {
                 obj.password = confirmPassword;
                 //Save to localstorage
                 localStorage.setItem(username, JSON.stringify(obj));
-                alert("Password changed successfully");
+                //Alert the user
+                output.style.color = "Green";
+                output.style.height = "10px";
+                output.style.fontSize = "8px";
+                output.textContent = "Password changed successfully";
             }
             else {
-                alert("Passwords don't match, try again");
+                pwdErr.forEach(element => {
+                    element.style.color = "red";
+                    element.style.height = "10px";
+                    element.style.fontSize = "8px";
+                    element.textContent = "Passwords don't match, please try again!!!";
+                });
             }
         }
         else {
-            alert("User name and email don't match");
+            output.style.color = "red";
+            output.style.height = "10px";
+            output.style.fontSize = "8px";
+            output.textContent = "User name and email don't match";
         }
     }
     else {
         //If doesnt exist ouput message
-        alert("Username does not exist");
+        usernameErr.style.color = "Red";
+        usernameErr.style.height = "10px";
+        usernameErr.style.fontSize = "8px";
+        usernameErr.textContent = "Username does not exist";
     }
 
 
