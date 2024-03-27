@@ -25,11 +25,11 @@ function handleSubmit() {
     else {
         // Tell the user enter login details again because they don't match
         pwdErr.style.color = "red";
-        pwdErr.style.height = "10px";
-        pwdErr.style.fontSize = "8px";
+        pwdErr.style.height = "1em";
+        pwdErr.style.fontSize = "0.9em";
         pwdErr.textContent = "Incorrect password or username. Please try again";
         setTimeout(function () {
-            pwdErr.style.color = "white";
+            pwdErr.style.color = "";
             pwdErr.style.height = "0px";
             pwdErr.style.fontSize = "0px";
             pwdErr.textContent = "";

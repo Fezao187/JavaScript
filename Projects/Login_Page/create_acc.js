@@ -31,8 +31,8 @@ function handleSubmit() {
             //Save to local storage
             localStorage.setItem(username, JSON.stringify(obj));
             output.style.color = "Green";
-            output.style.height = "10px";
-            output.style.fontSize = "8px";
+            output.style.height = "1em";
+            output.style.fontSize = "0.9em";
             output.textContent = "Account created successfully";
             setTimeout(function () {
                 location.reload();
@@ -42,8 +42,8 @@ function handleSubmit() {
             //Tell the user enter password again because they don't match
             pwdErr.forEach(element => {
                 element.style.color = "red";
-                element.style.height = "10px";
-                element.style.fontSize = "8px";
+                element.style.height = "1em";
+                element.style.fontSize = "0.9em";
                 element.textContent = "Passwords don't match, please try again!!!";
                 setTimeout(function () {
                     element.style.color = "white";
@@ -56,8 +56,8 @@ function handleSubmit() {
     }
     else {
         usernameErr.style.color = "red";
-        usernameErr.style.height = "10px";
-        usernameErr.style.fontSize = "8px";
+        usernameErr.style.height = "1em";
+        usernameErr.style.fontSize = "0.9em";
         usernameErr.textContent = "Username already exists";
         setTimeout(function () {
             usernameErr.style.color = "white";
