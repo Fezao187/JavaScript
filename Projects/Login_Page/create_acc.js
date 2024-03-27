@@ -34,6 +34,9 @@ function handleSubmit() {
             output.style.height = "10px";
             output.style.fontSize = "8px";
             output.textContent = "Account created successfully";
+            setTimeout(function () {
+                location.reload();
+            }, 5000);
         }
         else {
             //Tell the user enter password again because they don't match

@@ -32,6 +32,9 @@ function handleSubmit() {
                 output.style.height = "10px";
                 output.style.fontSize = "8px";
                 output.textContent = "Password changed successfully";
+                setTimeout(function () {
+                    location.reload();
+                }, 5000);
             }
             else {
                 pwdErr.forEach(element => {

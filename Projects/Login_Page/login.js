@@ -18,6 +18,9 @@ function handleSubmit() {
          * for now just use an alert
          */
         alert("You have successfully logged in");
+        setTimeout(function () {
+            location.reload();
+        }, 5000);
     }
     else {
         // Tell the user enter login details again because they don't match
