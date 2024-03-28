@@ -14,10 +14,8 @@ function handleSubmit() {
 
     //Check if user info matches the one in storage
     if ((obj.username === username) && obj.password === password) {
-        /**TODO: Show th user they logged in (in a cool way),
-         * for now just use an alert
-         */
-        alert("You have successfully logged in");
+        //Login confirmation
+        open("confirm_page.html");
         setTimeout(function () {
             location.reload();
         }, 5000);
